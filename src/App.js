@@ -8,16 +8,21 @@ function App() {
   const [showPages, setShowPages] = useState(false);
 
   useEffect(() => {
+    console.log("repeat");
     const handleResize = (e) => {
       let screenWidth = e.target.innerWidth;
       // console.log(screenWidth);
       if (screenWidth < 1000) {
         setMobMode(true);
+        // setShowPages(false);
       } else {
         setMobMode(false);
         setShowPages(false);
       }
     };
+    if (window.innerWidth < 1000) {
+      setMobMode(true);
+    }
 
     window.onresize = handleResize;
   }, []);

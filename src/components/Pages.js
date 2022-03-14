@@ -2,14 +2,14 @@ import React, { useRef, useEffect } from "react";
 import { PageItems } from "./NavItems";
 
 const Pages = ({ mobMode, showPages }) => {
-  const pagesEl = useRef(null);
+  //   const pagesEl = useRef(null);
 
   return (
     <div
       className={`pages${mobMode ? " mob" : ""}${
         showPages ? " shown" : " hidden"
       }`}
-      ref={pagesEl}
+      //   ref={pagesEl}
     >
       {console.log(showPages)}
       {PageItems.map((item) => {

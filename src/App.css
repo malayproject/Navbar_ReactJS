@@ -83,6 +83,7 @@ body {
   /* background-color: rgb(255, 193, 193); */
   height: 1.8rem;
   color: rgb(0, 61, 61);
+  cursor: pointer;
 }
 .pages.mob > * {
   animation: fadeIn 0.6s ease-in;
@@ -124,6 +125,7 @@ body {
   font-size: 1.8rem;
   transform: rotate(0deg);
   animation: spinAntiClock 0.4s ease-in;
+  cursor: pointer;
 }
 .burger.clicked {
   animation: spinClock 0.4s ease-in;
