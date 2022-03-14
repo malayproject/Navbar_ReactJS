@@ -48,6 +48,7 @@ body {
   width: 100%;
   background-color: rgb(255, 255, 255);
   align-items: flex-start;
+  justify-content: space-evenly;
   padding: 0 1.5rem;
 
   box-shadow: 0rem 0.6rem 0.6rem rgb(219, 219, 219);
@@ -58,7 +59,7 @@ body {
   animation: rollUp 0.3s ease-out;
 }
 .pages.mob.shown {
-  height: 10rem;
+  height: 14rem;
   animation: dropdown 0.3s ease-out;
 }
 @keyframes dropdown {
@@ -66,12 +67,12 @@ body {
     height: 2rem;
   }
   to {
-    height: 10rem;
+    height: 14rem;
   }
 }
 @keyframes rollUp {
   from {
-    height: 10rem;
+    height: 14rem;
   }
   to {
     height: 0rem;
@@ -81,12 +82,16 @@ body {
 .pages > * {
   text-decoration: none;
   /* background-color: rgb(255, 193, 193); */
-  height: 1.8rem;
+  /* height: 1.8rem; */
   color: rgb(0, 61, 61);
   cursor: pointer;
 }
 .pages.mob > * {
   animation: fadeIn 0.6s ease-in;
+  /* height: 15rem; */
+  font-size: 1.2rem;
+  width: 100%;
+  /* background-color: blueviolet; */
 }
 @keyframes fadeIn {
   from {
@@ -96,11 +101,27 @@ body {
     color: black;
   }
 }
-.pages.mob > *:focus {
-  color: rgb(0, 183, 255);
-  /* padding-left: 1rem; */
-  transform: translateX(0.4rem);
-  transition: transform 0.5s ease-in-out;
+.pages.mob > *:focus,
+.pages.mob > *:hover {
+  color: rgb(0, 131, 253);
+  padding-left: 0.6rem;
+  background-color: rgb(170, 217, 255);
+  /* transform: padding-left; */
+  animation: hoverSlide 0.5s ease-in-out;
+  /* transition: background-color 0.2s ease-in; */
+}
+@keyframes hoverSlide {
+  from {
+    color: black;
+    padding-left: 0rem;
+    background-color: rgb(255, 255, 255);
+  }
+
+  to {
+    color: rgb(0, 131, 253);
+    padding-left: 0.6rem;
+    background-color: rgb(170, 217, 255);
+  }
 }
 .social {
   display: flex;
